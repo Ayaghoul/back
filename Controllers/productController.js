@@ -136,7 +136,7 @@ module.exports = {
 };*/
 
 const asyncHandler = require("express-async-handler");
-const Product = require("../Models/Product");
+const Product = require("../models/Product");
 const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
