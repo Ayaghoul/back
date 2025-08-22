@@ -235,7 +235,7 @@ const deleteProduct = asyncHandler(async (req, res) => {
     if (fs.existsSync(imagePath)) fs.unlinkSync(imagePath);
   }
 
-  await product.remove();
+  await product.deleteOne();
   res.json({ message: "Produit supprimé" });
 });
 

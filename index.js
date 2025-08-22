@@ -7,6 +7,7 @@ import cors from "cors";
 import connectDB from "./config/ConnectDB.js";
 import productRoutes from "./Routes/productRoutes.js";
 import userRoutes from "./Routes/userRoutes.js"; // ⚡ il manquait ça
+import orderRoutes from "./Routes/orderRoutes.js";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 
 dotenv.config();
@@ -33,6 +34,7 @@ app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 // ⚡ Brancher les routes
 app.use("/api/products", productRoutes);
 app.use("/api/users", userRoutes); // <- indispensable
+app.use("/api/orders", orderRoutes);
 
 // middlewares erreurs
 app.use(notFound);
